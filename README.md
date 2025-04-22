@@ -73,16 +73,10 @@ Fork是Git的圖形化UI，方便非程式人員操作。
      在右方欄位當中為這次的更變命名，寫上註解，點擊Commit完成提交。
     ![tpJwm0W](https://github.com/user-attachments/assets/66b12dbd-0cce-43c8-967c-635643e670d6)
 
-1. **建立 Unity 專案：**
-    
-    - 在所需的資料夾中建立一個新的 Unity 專案。
-2. **初始化 Git 儲存庫：**
-    
-    ```bash
-    git init
-    ```
-    
-3. **設定 Git LFS (Large File Storage)：**
+
+### 在GitHub中建立新的Unity專案
+
+1. **設定 Git LFS (Large File Storage)：**
     
     - 下載並安裝 Git LFS。
       https://git-lfs.com/
@@ -140,7 +134,7 @@ Fork是Git的圖形化UI，方便非程式人員操作。
         git commit -m "設定 Git LFS"
         ```
         
-4. **建立 .gitignore：**
+2. **建立 .gitignore：**
     
     - 建立 `.gitignore` 檔案：
         
@@ -207,7 +201,7 @@ Fork是Git的圖形化UI，方便非程式人員操作。
         git commit -m "新增 .gitignore 檔案"
         ```
         
-5. **新增並提交初始專案檔案：**
+3. **新增並提交初始專案檔案：**
     
     - 以UnityHub建立專案，暫存並提交。
         
