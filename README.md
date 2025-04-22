@@ -72,9 +72,158 @@ Fork是Git的圖形化UI，方便非程式人員操作。
 5. Commit(提交)
      在右方欄位當中為這次的更變命名，寫上註解，點擊Commit完成提交。
     ![tpJwm0W](https://github.com/user-attachments/assets/66b12dbd-0cce-43c8-967c-635643e670d6)
-   
 
-7. Push(推)
-     回到All Commits介面，可以見到剛剛的提交，點擊Push，即可將更動更新到雲端上
-    ![j7L7als](https://github.com/user-attachments/assets/0aa7f4c1-bc67-4cb9-ab37-2b4d50aaa890)
+1. **建立 Unity 專案：**
+    
+    - 在所需的資料夾中建立一個新的 Unity 專案。
+2. **初始化 Git 儲存庫：**
+    
+    ```bash
+    git init
+    ```
+    
+3. **設定 Git LFS (Large File Storage)：**
+    
+    - 下載並安裝 Git LFS。
+      https://git-lfs.com/
+    - 在Git資料夾，右鍵選擇Open Git Bash here，執行以下指令：
+        
+        ```bash
+        git lfs install
+        ```
+        
+    - 建立 `.gitattributes` 檔案：
+        
+        ```bash
+        echo > .gitattributes
+        ```
+        
+    - 以編碼軟體編輯 `.gitattributes` 並新增以下內容（或根據需要進行客製化）：
+        
+        ```
+        *.png filter=lfs diff=lfs merge=lfs -text
+        *.jpg filter=lfs diff=lfs merge=lfs -text
+        *.jpeg filter=lfs diff=lfs merge=lfs -text
+        *.psd filter=lfs diff=lfs merge=lfs -text
+        *.mp3 filter=lfs diff=lfs merge=lfs -text
+        *.wav filter=lfs diff=lfs merge=lfs -text
+        *.ogg filter=lfs diff=lfs merge=lfs -text
+        *.m4a filter=lfs diff=lfs merge=lfs -text
+        *.mp4 filter=lfs diff=lfs merge=lfs -text
+        *.mov filter=lfs diff=lfs merge=lfs -text
+        *.avi filter=lfs diff=lfs merge=lfs -text
+        *.webm filter=lfs diff=lfs merge=lfs -text
+        *.mkv filter=lfs diff=lfs merge=lfs -text
+        *.zip filter=lfs diff=lfs merge=lfs -text
+        *.rar filter=lfs diff=lfs merge=lfs -text
+        *.7z filter=lfs diff=lfs merge=lfs -text
+        *.unitypackage filter=lfs diff=lfs merge=lfs -text
+        *.unity filter=lfs diff=lfs merge=lfs -text
+        *.prefab filter=lfs diff=lfs merge=lfs -text
+        *.anim filter=lfs diff=lfs merge=lfs -text
+        *.controller filter=lfs diff=lfs merge=lfs -text
+        *.shader filter=lfs diff=lfs merge=lfs -text
+        *.cginc filter=lfs diff=lfs merge=lfs -text
+        *.aif filter=lfs diff=lfs merge=lfs -text
+        ```
+        
+    - 告訴 Git LFS 追蹤指定的檔案：
+        
+        ```bash
+        git lfs track
+        ```
+        
+    - 提交 `.gitattributes` 檔案：
+        
+        ```bash
+        git add .gitattributes
+        git commit -m "設定 Git LFS"
+        ```
+        
+4. **建立 .gitignore：**
+    
+    - 建立 `.gitignore` 檔案：
+        
+        ```bash
+        echo > .gitignore
+        ```
+        
+    - 編輯 `.gitignore` 並新增以下內容（或根據需要進行客製化）：
+        
+        ```
+        # Unity 產生的資料夾
+        [Ll]ibrary/
+        [Tt]emp/
+        [Oo]bj/
+        [Bb]uild/
+        [Bb]uilds/
+        [Ll]ogs/
+        [Mm]emoryCaptures/
+        
+        # 使用者特定設定
+        *.csproj
+        *.unityproj
+        *.sln
+        *.suo
+        *.tmp
+        *.user
+        *.userprefs
+        *.pidb
+        *.booproj
+        *.svd
+        
+        # 作業系統產生的檔案
+        .DS_Store
+        Thumbs.db
+        
+        # Rider
+        .idea/
+        *.sln.iml
+        
+        # Visual Studio Code
+        .vscode/
+        
+        # Crash Reports
+        sysinfo.txt
+        
+        # 自動產生的 meta 和快取
+        *.apk
+        *.aab
+        
+        # 忽略 JetBrains Rider 快取
+        .idea/
+        
+        # Unity Cloud Build
+        .cloudbuild/
+        
+        # 其他
+        *.swp
+        ```
+        
+    - 提交 `.gitignore` 檔案：
+        
+        ```bash
+        git add .gitignore
+        git commit -m "新增 .gitignore 檔案"
+        ```
+        
+5. **新增並提交初始專案檔案：**
+    
+    - 以UnityHub建立專案，暫存並提交。
+        
+        ```bash
+        git add .
+        ```
+        
+    - 提交變更：
+        
+        ```bash
+        git commit -m "初始提交"
+        ```      
+    
+    - 將您的本地儲存庫推送到遠端儲存庫(如果不是現在的版本，請創建新的分支推上去)：
+        
+        ```bash
+        git push -u origin main
+        ```
    
