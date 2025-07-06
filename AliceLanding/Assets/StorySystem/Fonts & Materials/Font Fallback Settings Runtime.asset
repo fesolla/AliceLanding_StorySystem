@@ -16,18 +16,18 @@ MonoBehaviour:
   font: {fileID: 11400000, guid: f4af3ae642b8c0443b54acf3301a24a7, type: 2}
   fallbackFontsPath: Fonts & Materials
   localizeFallbacks:
-  - language: English
+  - language: en
     fallbackNames:
     - StorySystemNotoSansJP0 SDF
-  - language: Japanese
+  - language: jp
     fallbackNames:
     - StorySystemNotoSansJP0 SDF
   - language: Korean
     fallbackNames:
     - StorySystemNotoSansKR0 SDF
-  - language: ChineseSimplified
+  - language: zh-CN
     fallbackNames:
     - StorySystemNotoSansSC0 SDF
-  - language: ChineseTraditional
+  - language: zh-TW
     fallbackNames:
     - StorySystemNotoSansTC0 SDF

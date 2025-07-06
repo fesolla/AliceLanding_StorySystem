@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   font: {fileID: 11400000, guid: f4af3ae642b8c0443b54acf3301a24a7, type: 2}
   localizeFallbacks:
-  - language: English
+  - language: en
     fallbacks:
     - {fileID: 11400000, guid: 62716fdbe1fdeb5438fa2163c5bf7a50, type: 2}
-  - language: Japanese
+  - language: jp
     fallbacks:
     - {fileID: 11400000, guid: 62716fdbe1fdeb5438fa2163c5bf7a50, type: 2}
   - language: Korean
     fallbacks:
     - {fileID: 11400000, guid: 33a5607376b1dc146b06bdef564c2cca, type: 2}
-  - language: ChineseSimplified
+  - language: zh-CN
     fallbacks:
     - {fileID: 11400000, guid: 82d2ad4a258f4fe4a972865b6932d2e9, type: 2}
-  - language: ChineseTraditional
+  - language: zh-TW
     fallbacks:
     - {fileID: 11400000, guid: d3dd3c905f8d4e340a9d35f468baf1b4, type: 2}
